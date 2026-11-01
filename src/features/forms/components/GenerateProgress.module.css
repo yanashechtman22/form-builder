@@ -1,0 +1,93 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.track {
+  position: relative;
+  height: 0.42rem;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface-muted));
+}
+
+.fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 8%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-accent) 0%, #14b8a6 70%, #99f6e4 100%);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 45%, transparent);
+  animation: grow 72s var(--ease-out) forwards;
+}
+
+.sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 36%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 252, 247, 0.15) 35%,
+    rgba(255, 252, 247, 0.92) 50%,
+    rgba(255, 252, 247, 0.15) 65%,
+    transparent 100%
+  );
+  animation: sweep 1.7s var(--ease-out) infinite;
+}
+
+.line {
+  margin: 0;
+  min-height: 1.35rem;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  letter-spacing: -0.015em;
+  animation: arrive 420ms var(--ease-out);
+}
+
+@keyframes grow {
+  0% {
+    width: 8%;
+  }
+
+  100% {
+    width: 92%;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-130%);
+  }
+
+  100% {
+    transform: translateX(290%);
+  }
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill,
+  .sheen,
+  .line {
+    animation: none;
+  }
+
+  .fill {
+    width: 55%;
+  }
+}

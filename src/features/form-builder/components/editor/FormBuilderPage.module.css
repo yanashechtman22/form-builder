@@ -1,0 +1,48 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.15rem 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.titleInput,
+.descriptionInput {
+  width: 100%;
+}
+
+.titleInput input {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-inline: 0 !important;
+  min-height: 2.75rem !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.04em !important;
+  color: var(--color-text-primary) !important;
+  text-align: left;
+}
+
+.titleInput input::placeholder {
+  color: var(--color-text-tertiary) !important;
+}
+
+.descriptionInput textarea {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-inline: 0 !important;
+  color: var(--color-text-secondary) !important;
+  font-size: var(--text-md) !important;
+  line-height: var(--line-relaxed) !important;
+  min-height: 2.25rem !important;
+  text-align: left;
+}

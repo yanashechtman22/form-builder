@@ -1,0 +1,35 @@
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 1.65rem;
+  padding: 0 0.3rem;
+  margin-left: -0.3rem;
+  border: none;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.trigger:hover,
+.trigger[data-expanded] {
+  background: var(--color-surface-muted);
+  color: var(--color-text-primary);
+}
+
+.label {
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemIcon {
+  display: inline-flex;
+  color: var(--color-text-secondary);
+}

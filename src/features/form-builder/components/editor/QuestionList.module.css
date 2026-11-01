@@ -1,0 +1,113 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.insertGap {
+  position: relative;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insertGap::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  height: 1px;
+  background: transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.insertGap:hover::before,
+.insertGap:focus-within::before,
+.insertGapOpen::before {
+  background: var(--color-border);
+}
+
+.insertGapOpen {
+  z-index: 30;
+}
+
+.insertControl {
+  position: relative;
+  display: inline-flex;
+}
+
+.insertButton {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 1.6rem;
+  min-width: 1.6rem;
+  padding: 0 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  opacity: 0.7;
+  box-shadow: var(--shadow-sm);
+  transition:
+    opacity var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.insertGap:hover .insertButton,
+.insertGap:focus-within .insertButton,
+.insertGapOpen .insertButton,
+.insertButton:focus-visible {
+  opacity: 1;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+
+.insertButtonLabel {
+  display: none;
+}
+
+.insertGap:hover .insertButtonLabel,
+.insertGap:focus-within .insertButtonLabel,
+.insertGapOpen .insertButtonLabel {
+  display: inline;
+}
+
+.menuAnchor {
+  position: absolute;
+  z-index: 20;
+}
+
+.menuBelow {
+  top: calc(100% + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menuAbove {
+  bottom: calc(100% + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menuRight {
+  left: calc(100% + 0.4rem);
+}
+
+.menuLeft {
+  right: calc(100% + 0.4rem);
+}
+
+.hint {
+  margin: var(--space-2) 0 0;
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+}

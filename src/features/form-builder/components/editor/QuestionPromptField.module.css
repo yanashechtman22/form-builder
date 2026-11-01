@@ -1,0 +1,32 @@
+.root {
+  width: 100%;
+  position: relative;
+}
+
+.root input {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary) !important;
+  border: none !important;
+  background: transparent !important;
+  padding-inline: 0 !important;
+  min-height: 2.15rem !important;
+  box-shadow: none !important;
+}
+
+.root input:focus {
+  outline: none !important;
+}
+
+.root input::placeholder {
+  color: var(--color-text-tertiary) !important;
+  font-weight: 500 !important;
+}
+
+.slashAnchor {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  z-index: 25;
+}

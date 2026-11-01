@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.bullet {
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 50%;
+}
+
+.row input {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  min-height: 1.9rem !important;
+  padding-inline: 0.25rem !important;
+  font-size: var(--text-md) !important;
+}
+
+.addButton {
+  align-self: flex-start;
+  margin-left: 1.25rem;
+}

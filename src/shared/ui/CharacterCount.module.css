@@ -1,0 +1,16 @@
+.count {
+  margin: 0;
+  text-align: end;
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.warn {
+  color: var(--color-warning);
+}
+
+.limit {
+  color: var(--color-danger);
+  font-weight: 500;
+}

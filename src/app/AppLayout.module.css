@@ -1,0 +1,33 @@
+.paletteTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 1.75rem;
+  padding: 0 0.55rem 0 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.paletteTrigger:hover {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.shortcuts {
+  display: inline-flex;
+  gap: 0.15rem;
+}
+
+@media (max-width: 560px) {
+  .paletteTrigger span:first-child {
+    display: none;
+  }
+}
